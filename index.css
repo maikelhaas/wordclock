@@ -1,0 +1,50 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  background-color: black;
+}
+
+.container {
+  max-width: 26rem;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+}
+
+.wordclock {
+  align-self: center;
+  border: 1px solid #131313;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.letters {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  justify-self: center;
+  align-self: center;
+}
+
+.letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #242424;
+}
+
+.active {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.letter::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
