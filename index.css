@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  max-width: 26rem;
+  max-width: 38rem;
   min-height: 100vh;
   margin: 0 auto;
   display: grid;
@@ -30,6 +30,7 @@ body {
 }
 
 .letter {
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +41,7 @@ body {
 .active {
   color: white;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 2rem
 }
 
 .letter::before {
