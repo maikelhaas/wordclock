@@ -48,12 +48,13 @@ const words = {
 };
 
 const htmlLetters = document.querySelector('.letters');
-const letter = htmlLetters.childNodes;
 
 // Add letters into html
 grid.map((letter) => {
   htmlLetters.insertAdjacentHTML('beforeend', `<div class='letter'>${letter}</div>`);
 });
+
+const letter = htmlLetters.childNodes;
 
 function setActive(word) {
   for (i = word[0]; i <= word[1]; i++) {
