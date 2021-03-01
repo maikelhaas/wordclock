@@ -87,6 +87,9 @@ function setWords() {
 
   // Set the word per 5 minutes
   switch (minute) {
+    case 0:
+      setActive(words.oclock);
+      break;
     case 5:
     case 55:
       setActive(words.five);
@@ -110,7 +113,6 @@ function setWords() {
     case 30:
       setActive(words.half);
     default:
-      setActive(words.oclock);
       break;
   }
 
@@ -125,7 +127,7 @@ function setWords() {
     if (minute !== 0) setActive(words.past);
   } else {
     setActive(words.to);
-    hour = hour === 12 ? 1 : hour + 1; // If it is 11:40 you would see "twenty to twelve"
+    hour = hour === 12 ? 1 : hour + 1; // If it is 12:40 you would see "twenty to one", at 11:40 "twenty to twelve"
   }
 
   // Set hour word
